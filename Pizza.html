@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="Pizza.css">
+
+<title>Nick's Pizza</title>
+</head>
+<body>
+<div id= "front-page">
+    <div id= "front-page-intro">
+        <h1 id = "PizzaT"> ...... </h1>
+        <h3 id = "Slogan"> Our dough is made fresh </h3>
+        <button type= "button" id= "makeButton" class="make">Make a pizza!</button>
+    
+    </div>  
+</div>
+
+<div id ="myModal" class="modal">
+    <div id= "modal-content">
+        <span class="close"> &times; </span>
+        
+        <div id = "form-psize">
+            <h4><u>Pizza Size:</u></h4>
+            <form action="">
+                <label id = "label1" for = "personal"> Personal Pizza $6.00 </label>
+                <input type = "radio" id = "personal" class = "radio" name = "size" value = "6"> </br>
+                <label for = "medium"> Medium Pizza $10.00 </label>
+                <input type = "radio" id = "medium" class = "radio" name = "size" value = "10"> </br>
+                <label for = "large"> Large Pizza $14.00 </label>
+                <input type = "radio" id = "large" class = "radio" name = "size" value = "14"> </br>
+                <label for = "xlarge"> XLarge Pizza $16.00 </label>
+                <input type = "radio" id = "xlarge" class = "radio" name = "size" value = "16"> </br>
+                <label for = "extra-chese"> Extra Cheese +$3.00 </label>
+                <input type = "checkbox" id = "extra-cheese" class = "radio" name = "size" value = "3"> </br>  
+            </form>
+        </div>
+        
+        <div id = "form-sauce">
+            <h4><u>Sauce Selection:</u></h4>
+            <form action = "">
+                <label for = "marinara"> Marinara </label>
+                <input type = "radio" id="marinara" class = "radio" name = "sauce" value="0"> </br>
+                <label for = "white"> White </label>
+                <input type = "radio" id="white" class = "radio" name = "sauce" value="0"> </br>
+                <label for = "barbeque"> Barbeque </label>
+                <input type = "radio" id="barbeque" class = "radio" name = "sauce" value="0"> </br>
+                <label for = "none"> No Sauce </label>
+                <input type = "radio" id="none" class = "radio" name = "sauce" value="0"> </br>
+            </form>
+        </div>
+
+        <div id = "form-crust">
+            <h4><u>Crust Selection:</u></h4>
+            <form action = "">
+                <label for = "plain"> Plain </label>
+                <input type = "radio" id="plain" class = "radio" name= "crust" value="0"> </br>
+                <label for = "garlic"> Garlic Butter </label>
+                <input type = "radio" id="garlic" class = "radio" name= "crust" value="0"> </br>
+                <label for = "stuffed"> Cheesy Stufed +$3.00 </label>
+                <input type = "radio" id="stuffed" class = "radio" name= "crust" value = "3"> </br>
+                <label for = "spicy"> Spicy </label>
+                <input type = "radio" id="spicy" class = "radio" name= "crust" value="0"> </br>
+                <label for = "house-special"> House Special </label>
+                <input type = "radio" id="house-special" class = "radio" name= "crust" value="0"> </br>
+            </form>
+        </div>
+
+        <div id = "form-meats">
+            <h4><u>Meat Selection:</u></h4>
+            <form action = "">
+                <label for = "meat-pep"> Pepperoni </label> 
+                <input type = "checkbox" id="meat-pep" class = "meat-radio" value="0"> </br>
+               
+                <label for = "meat-canadia"> Canadian Bacon </label> 
+                <input type = "checkbox" id="meat-canadia" class = "meat-radio" value="0"> </br>
+                
+                <label for = "meat-ground"> Ground Beef </label> 
+                <input type = "checkbox" id="meat-ground" class = "meat-radio" value="0"> </br>
+                
+                <label for = "meat-anchovy"> Anchovy </label> 
+                <input type = "checkbox" id="meat-anchovy" class = "meat-radio" value="0"> </br>
+                
+                <label for = "meat-chicken"> Chicken </label> 
+                <input type = "checkbox" id="meat-chicken" class = "meat-radio" value="0"> </br>
+                
+                <b>Each additional meat item after the first is +$1.00</b>
+            </form>
+        </div>
+
+        <div id = "form-veggies">
+            <h4><u> Vegetable Selection:</u></h4>
+            <form action = "">
+                <label for= "veggie-tomatoes"> Tomatoes </label>
+                <input type = "checkbox" id="veggie-tomatoes" class = "veggie-radio" value="0" > </br>
+                
+                <label for= "veggie-onions"> Onions </label>
+                <input type = "checkbox" id="veggie-onions" class = "veggie-radio" value="0"> </br>
+                
+                <label for= "veggie-olives"> Olives </label>
+                <input type = "checkbox" id="veggie-olives" class = "veggie-radio" value="0"> </br>
+               
+                <label for= "veggie-green"> Green Peppers </label>
+                <input type = "checkbox" id="veggie-green" class = "veggie-radio" value="0" > </br>
+                
+                <label for= "veggie-mushroom"> Mushrooms </label>
+                <input type = "checkbox" id="veggie-mushrooms" class = "veggie-radio" value="0"> </br>
+               
+                <label for= "veggie-pineapple"> Pineapple </label>
+                <input type = "checkbox" id="veggie-pineapple" class = "veggie-radio" value="0"> </br>
+               
+                <label for= "veggie-spinach"> Spinach </label>
+                <input type = "checkbox" id="veggie-spinach" class = "veggie-radio" value="0"> </br>
+                
+                <label for= "veggie-jalepeno"> Jalepeno </label>
+                <input type = "checkbox" id="veggie-jalepeno" class = "veggie-radio" value="0"> </br>
+                <b>Each additional veggie items after the first is +$1.00</b>
+            </form>
+        </div>
+
+        <button onclick="totalEve()" onclick= type="submit" id = "tocheckout"> Make Pizza </button>
+
+        <div id = "receipt">
+            <h2>Your Total:</h2> </br>
+            <h2 id = "calctotal"> </h2>
+
+
+        </div>
+      
+    </div>
+</div>
+
+
+<script src="pizzaJS.js"> </script>
+
+
+
+
+</body>
+</html>
